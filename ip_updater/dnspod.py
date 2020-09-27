@@ -4,7 +4,7 @@ from logger import GlobalLogger
 from config import *
 
 
-class Updater(object):
+class DnspodUpdater(object):
     def __init__(self):
         self.name = "dnspod_updater"
         self.logger = GlobalLogger(logger_name=self.name)
@@ -25,6 +25,9 @@ class Updater(object):
             self.ip = ip
             with open(self.ip_file, "w") as fl:
                 fl.write(self.ip)
+            return True
+        else:
+            return False
 
     def run(self):
         try:
@@ -32,6 +35,6 @@ class Updater(object):
             ip_bin = sock.recv(1024)
             sock.close()
             ip_str = ip_bin.decode("utf-8")
-            self.update_ip(ip_str)
+            return self.update_ip(ip_str)
         except Exception as e:
             print(e)

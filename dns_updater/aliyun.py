@@ -24,7 +24,7 @@ class AliDNS():
         request.set_Type(Type)
         request.set_Value(Value)
         response = client.do_action_with_exception(request)
-        print(response)
+        self.logger.info("修改域名解析记录， 结果是：", response)
 
     def add(self, DomainName, RR, Type, Value):  # 添加新的域名解析记录
         self.logger.info("添加新的记录: domain:{}, value:{}".format(DomainName, Value))
@@ -36,7 +36,7 @@ class AliDNS():
         request.set_Type(Type)
         request.set_Value(Value)
         response = client.do_action_with_exception(request)
-        print(response)
+        self.logger.info("添加域名解析记录， 结果是：", response)
 
     def run(self, ipv4):
         request = DescribeSubDomainRecordsRequest()

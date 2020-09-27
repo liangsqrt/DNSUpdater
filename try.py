@@ -1,8 +1,9 @@
-from ip_updater.ipify import Updater
-from dns_updater.aliyun import AliDNS
+# from ip_updater.ipify import IpifyUpdaterUpdater
+# from ip_updater.dnspod import DnspodUpdater
+# from dns_updater.aliyun import AliDNS
+from updater import Runner
 
-
-updater = Updater()
+updater = Runner()
 updater.run()
 
 # dns = AliDNS()

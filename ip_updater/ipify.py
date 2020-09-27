@@ -5,7 +5,7 @@ from config import *
 import requests
 
 
-class Updater(object):
+class IpifyUpdater(object):
     def __init__(self):
         self.name = "ipify_updater"
         self.logger = GlobalLogger(logger_name=self.name)
@@ -26,10 +26,13 @@ class Updater(object):
             self.ip = ip
             with open(self.ip_file, "w") as fl:
                 fl.write(self.ip)
+            return True
+        else:
+            return False
 
     def run(self):
         try:
             ip_str = requests.get(url="https://api.ipify.org/?format=json", timeout=2).json()['ip']
-            self.update_ip(ip_str)
+            return self.update_ip(ip_str)
         except Exception as e:
             print(e)
