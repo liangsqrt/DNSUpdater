@@ -1,5 +1,5 @@
 import logging
-from config import *
+from DNSUpdater.config import *
 
 
 class GlobalLogger():
