@@ -1,3 +1,11 @@
+import sys, os
+
+dir_base = os.path.dirname(__file__)
+dir_base2 = os.path.dirname(dir_base)
+sys.path.append(dir_base)
+sys.path.append(dir_base2)
+
+
 from DNSUpdater.DNSUpdater.aliyun import *
 from DNSUpdater.IpUpdater.dnspod import *
 
