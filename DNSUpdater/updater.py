@@ -6,8 +6,8 @@ sys.path.append(dir_base)
 sys.path.append(dir_base2)
 
 
-from DNSUpdater.DNSUpdater.aliyun import *
-from DNSUpdater.IpUpdater.dnspod import *
+from DNSUpdater.aliyun import *
+from IpUpdater.dnspod import *
 
 
 class Runner():
