@@ -1,7 +1,5 @@
-import socket
-import time
-from logger import GlobalLogger
-from config import *
+from DNSUpdater.logger import GlobalLogger
+from DNSUpdater.config import *
 import requests
 
 

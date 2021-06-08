@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  dns_updater:
+    container_name: dns_updater
+    build:
+      context: DNSUpdater
+      dockerfile: ./DockerFile
+    ports:
+      - "58016:8000"
+    restart: always
+    volumes:
+      - "~/MyData/docker/dns_updater:/var/atlassian/application-data/bitbucket"

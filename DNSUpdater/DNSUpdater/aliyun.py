@@ -1,11 +1,9 @@
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkalidns.request.v20150109.DescribeSubDomainRecordsRequest import DescribeSubDomainRecordsRequest
-from aliyunsdkalidns.request.v20150109.DescribeDomainRecordsRequest import DescribeDomainRecordsRequest
 from aliyunsdkalidns.request.v20150109.UpdateDomainRecordRequest import UpdateDomainRecordRequest
 from aliyunsdkalidns.request.v20150109.DeleteSubDomainRecordsRequest import DeleteSubDomainRecordsRequest
-from logger import GlobalLogger
-import json
-from config import *
+from DNSUpdater.logger import GlobalLogger
+from DNSUpdater.config import *
 
 
 client = AcsClient(accessKeyId, accessSecret, 'cn-hangzhou')

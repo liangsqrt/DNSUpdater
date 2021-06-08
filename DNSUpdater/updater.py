@@ -1,6 +1,5 @@
-from dns_updater.aliyun import *
-from ip_updater.dnspod import *
-from ip_updater.ipify import *
+from DNSUpdater.DNSUpdater.aliyun import *
+from DNSUpdater.IpUpdater.dnspod import *
 
 
 class Runner():
