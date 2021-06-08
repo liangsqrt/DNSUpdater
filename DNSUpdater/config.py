@@ -1,6 +1,8 @@
 import os, sys
 import json
 
+with open("config.json", "r") as fl:
+    config_data = json.load(fl)
 
 # 基本配置
 ip_update_interval = 1
@@ -13,10 +15,10 @@ dir_log = os.path.join(dir_base, log_path_name)
 
 # 阿里云配置
 ipv4_flag = 1
-accessKeyId = ""  # 将accessKeyId改成自己的accessKeyId
-accessSecret = ""  # 将accessSecret改成自己的accessSecret
-domain = ""  # 你的主域名
-name_ipv4 = ""  # 要进行ipv4 ddns解析的子域名
+accessKeyId = config_data["accessKeyId"]  # 将accessKeyId改成自己的accessKeyId
+accessSecret = config_data["accessSecret"]  # 将accessSecret改成自己的accessSecret
+domain = config_data["domain"]  # 你的主域名
+name_ipv4 = config_data["name_ipv4"]  # 要进行ipv4 ddns解析的子域名
 
 ip_udpater = "dnspod"
 
