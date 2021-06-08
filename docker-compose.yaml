@@ -5,7 +5,7 @@ services:
     container_name: dns_updater
     build:
       context: DNSUpdater
-      dockerfile: ./Dockerfile
+      dockerfile: ../Dockerfile
     ports:
       - "58016:8000"
     restart: always
